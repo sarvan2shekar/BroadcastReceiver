@@ -4,15 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.testapp.sarvan.broadcastreceiver.MainActivity">
+    android:paddingBottom="@dimen/padding_bottom"
+    android:paddingEnd="@dimen/padding_right"
+    android:paddingLeft="@dimen/padding_left"
+    android:paddingRight="@dimen/padding_right"
+    android:paddingStart="@dimen/padding_left"
+    android:paddingTop="@dimen/padding_top"
+    tools:context="com.testapp.sarvan.broadcastreceiver.view.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editText_broadcast"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="@dimen/margin_right"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:layout_marginStart="@dimen/margin_left"
+        android:layout_marginTop="@dimen/margin_top"
+        android:hint="@string/broadcastMessage"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_broadcast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top"
+        android:onClick="broadcastCustomIntent"
+        android:text="@string/broadcastButton"
+        app:layout_constraintLeft_toLeftOf="@+id/editText_broadcast"
+        app:layout_constraintRight_toRightOf="@+id/editText_broadcast"
+        app:layout_constraintTop_toBottomOf="@+id/editText_broadcast" />
 
 </android.support.constraint.ConstraintLayout>
